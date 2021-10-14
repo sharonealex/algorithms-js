@@ -1,23 +1,30 @@
+<!-- OPEN THIS FILE IN YOUR WEB BROWSER TO SEE THE TEST RESULTS
+DO NOT MODIFY THIS FILE -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.1.2/mocha.min.css" integrity="sha512-6RWs5FczsXwODIZJoL0szz3bXX5W+q/m7bFVQ7HSwZbBXd7PpyYrg2f9Dr4Y2Guqi5k4NJsemxXuiiFoI8fQ4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.1.2/mocha.min.js" integrity="sha512-/Cmhn+YqAYl+YPURerttko07x0wAyGubgGLL0Y5OqddVZcJ7CCTedJN/R9H/XkXvY+n1qCCsyvLKpq2PpA7JOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Arithmetic Tests</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
-    <title>Document</title>
-    <script>mocha.setup("bdd")</script> 
-    <!--This puts the BDD apis of mocha that is describe, it, should etc on the global scope-->
-
-    <!--mocha runs in the browser. Every mocha release has a mocha.css and  mocha.js for the browser-->
-
-    <!-- we start with mocha.setup(bdd) before loading the test scripts.Then execute the test files. Then finally run the
-    mocha.run() script-->
-
-</head>
-<body>
-    
-</body>
+  </head>
+  <!-- OPEN THIS FILE IN YOUR WEB BROWSER TO SEE THE TEST RESULTS
+DO NOT MODIFY THIS FILE -->
+  <body>
+    <div id="mocha"></div>
+    <script>
+      mocha.setup("bdd");
+    </script>
+    <script src="arithmetic.js"></script>
+    <script src="test/arithmetic.test.js"></script>
+    <script>
+      mocha.run();
+    </script>
+  </body>
 </html>
