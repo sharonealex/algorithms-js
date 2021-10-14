@@ -8,6 +8,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.1.2/mocha.min.js" integrity="sha512-/Cmhn+YqAYl+YPURerttko07x0wAyGubgGLL0Y5OqddVZcJ7CCTedJN/R9H/XkXvY+n1qCCsyvLKpq2PpA7JOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
     <title>Document</title>
+    <script>mocha.setup("bdd")</script> 
+    <!--This puts the BDD apis of mocha that is describe, it, should etc on the global scope-->
+
+    <!--mocha runs in the browser. Every mocha release has a mocha.css and  mocha.js for the browser-->
+
+    <!-- we start with mocha.setup(bdd) before loading the test scripts.Then execute the test files. Then finally run the
+    mocha.run() script-->
+
 </head>
 <body>
     
