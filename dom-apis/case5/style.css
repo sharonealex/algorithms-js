@@ -1,0 +1,31 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 200px;
+  border: 1px solid #2d2d2d;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  align-items: center;
+}
+
+div {
+  color: #fff;
+  background: #2d2d2d;
+  padding: 12px;
+  
+}
+
+
+/*
+How to center a div in the page.
+1. set the parent element display fle.
+2. Give it a set height and width. ONly then the idea of centering works.
+3. use justify content- center and align content center
+*/
