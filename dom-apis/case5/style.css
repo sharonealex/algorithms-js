@@ -1,41 +1,78 @@
-body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-section {
-  width: 400px;
-  border: 1px solid #2d2d2d;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 400px;
-  align-items: center;
-  background-color: teal;
+body{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: forestgreen;
+  color: white;
+  font-size: 30px;
 }
 
-div {
-  color: #fff;
-  background: #2d2d2d;
-  padding: 20px;
+#card {
+width: 80vw;
+background-color: yellowgreen;
+border: 1px solid white;
+margin: 60px auto;
+padding: 30px;
+border-radius: 30px;
+box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
 }
 
-.input {
-  padding: 20px;
+
+input{
+  height: 50px;;
+  width: 100%;
+  padding: 6px;
   margin-top: 10px;
+  border: 1px solid yellow;
+  border-radius: 25px;;
 }
 
-.count {
-  background-color: red;
-  color: black;
+h1{text-align: center;}
+
+ul {
+  list-style: none;
+
 }
+
+li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: slateblue;
+  color: white;
+}
+
+li button {
+  float: right;
+  height: 40px;
+  cursor: pointer;
+  background-color: orange;
+  color: black;
+  font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
 
 /*
 How to center a div in the page.
-1. set the parent element display fle.
+1. set the parent element display flex.
 2. Give it a set height and width. ONly then the idea of centering works.
 3. use justify content- center and align content center
+
+OR
+
+
+margin: 60px auto;
 */

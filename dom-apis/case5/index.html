@@ -5,20 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
-
+  <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-  
-<section>
-  <div class="card">
-    <form>
-      <label>Add a Todo:</label>
-      <input type="text" placeholder="I need to ....">
+  <div id="card">
+    <h1>Todo Tracker</h1>
+    <form id="todo-form">
+      <label for="todo-text">Add a todo:</label>
+      <input id="todo-text" type="text" placeholder="I need to....">
+    
     </form>
+    <p>Count:<span id="count"></span></p>
+    <ul id="todo-list"></ul>
   </div>
-  <p>Todo Count: <span></span></p>
-</section>
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

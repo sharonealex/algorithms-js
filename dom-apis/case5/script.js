@@ -1,43 +1,68 @@
-var inputEl = document.querySelector("input");
-var countEl = document.querySelector("span");
-var formEl = document.querySelector("form");
-var cardEl = document.querySelector(".card")
+var cardEl = document.querySelector(".card");
+var todoFormEl = document.querySelector("#todo-form");
+var todoTextEl = document.querySelector("#todo-text");
+var countEl = document.querySelector("#count");
+var todoListEl = document.querySelector("#todo-list");
+
 var todos = [];
-var count = 0;
 
-
-function saveTodos(item){
-  var todos = JSON.parse(localStorage.getItem("todos"));
-  todos.push(item);
-  localStorage.setItem("todos", JSON.stringify(todos))
+function storedTodos (){
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-formEl.addEventListener("submit", function(event){
+function renderTodos(){
+  //clear current ones. else it will append.
+  //update count.
+  todoListEl.innerHTML = "";
+  countEl.textContent = todos.length;
+
+  //render a new li for each todo
+
+  for(var i =0; i < todos.length; i ++){
+  var li = document.createElement("li");
+  li.textContent = todos[i];
+  li.setAttribute("data-index", i);
+
+  var button = document.createElement("button");
+  button.textContent = "Complete ✔️";
+
+  li.appendChild(button);
+  todoListEl.appendChild(li);
+}
+}
+
+function init(){
+var storedTodos = JSON.parse(localStorage.getItem("todos"));
+if (storedTodos != null) todos = storedTodos;
+renderTodos();
+}
+
+
+
+todoFormEl.addEventListener("submit", function(event){
   event.preventDefault();
- count++;
- saveTodos(inputEl.value);
- inputEl.value = '';
- displayTodos();
- displayCount();
+
+  var todoText = todoTextEl.value.trim();
+  if (todoText == ""){
+    return;
+  }
+  todos.push(todoText);
+  todoTextEl.value = "";
+  storedTodos();
+  renderTodos();
 })
 
-function displayCount(){
- countEl.textContent = count;
-}
 
-function displayTodos(){
-  var todos = JSON.parse(localStorage.getItem("todos"));
-  for(var i = 0; i< todos.length; i ++){
-    var pEl = document.createElement("pEl");
-    pEl.textContent = todos[i];
-    cardEl.appendChild(pEl);
-    cardEl.setAttribute("class", ".card")
+todoListEl.addEventListener("click", function(event){
+  event.preventDefault();
+  var element = event.target;
+
+  if(element.matches("button")===true){
+    var index = element.parentElement.getAttribute("data-index");
+    todos.splice(index, 1);
   }
+  storedTodos();
+  renderTodos();
+})
 
-
-
-}
-
-displayCount();
-
-displayTodos();
+init();
