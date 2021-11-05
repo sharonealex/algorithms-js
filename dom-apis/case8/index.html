@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>  <i class="fab fa-github"></i>Git it done</h1>
+        <p>Search for a GitHub user or click on a language to see a list of repositories and how many open issues they have!</p>
+    </header>
+    <main>
+        <div class="search-container">
+            <div class="user-card">
+                <div class="card-header">
+                    <h2>SEARCH BY USER</h2>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <label for="username">Username</label>
+                        <input id="username" type="text" minlength="12">
+                        <button type="submit" id="userSearch">Get User</button>
+                    </form>
+                </div>
+            </div>
+            <div class="topic-card">
+                <div class="card-header">
+                    <h2>SEARCH BY TOPIC</h2>
+                </div>
+                    <button type="submit" id="topicSearch">JavaScript</button>
+                    <button type="submit" id="topicSearch">Python</button>
+                    <button type="submit" id="topicSearch">React</button>
+            </div>
+        </div>
+       
+        <div class="wrapper">
+            <p>Showing repositories for user<span id="username"></span></p>
+            <ul></ul>
+        </div>
+    </main>
+    <footer>
+       <p>&hearts;powered by repos from github&hearts;</p>
+    </footer>
+</body>
+</html>
