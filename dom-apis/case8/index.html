@@ -21,7 +21,7 @@
                     <h2>SEARCH BY USER</h2>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form id="user-form">
                         <label for="username">Username</label>
                         <input id="username" type="text" minlength="12">
                         <button type="submit" id="userSearch">Get User</button>
@@ -32,19 +32,23 @@
                 <div class="card-header">
                     <h2>SEARCH BY TOPIC</h2>
                 </div>
-                    <button type="submit" id="topicSearch">JavaScript</button>
-                    <button type="submit" id="topicSearch">Python</button>
-                    <button type="submit" id="topicSearch">React</button>
+                <div id="topicButtons">
+                    <button type="submit" class="topicSearch" data-language="javascript">JavaScript</button>
+                    <button type="submit" class="topicSearch" data-language="python">Python</button>
+                    <button type="submit" class="topicSearch" data-language="react">React</button>
+                </div>
+                  
             </div>
         </div>
        
         <div class="wrapper">
             <p>Showing repositories for user<span id="username"></span></p>
-            <ul></ul>
+            <ul id="repo-container"></ul>
         </div>
     </main>
     <footer>
        <p>&hearts;powered by repos from github&hearts;</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
