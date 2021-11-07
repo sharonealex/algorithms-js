@@ -7,12 +7,13 @@ var topicSearchButtonEl = document.querySelector("#topicButtons")
 
 
 function displayRepos(data, searchData) {
+    if(data.length === 0) return;
     if (data.length !== 0) {
         for (var i = 0; i < data.length; i++) {
             var repoName = data[i].full_name;
             var repoLink = document.createElement("a");
             repoLink.textContent = repoName;
-            repoLink.setAttribute("href", data[i].html_url);
+            repoLink.setAttribute('href', './single-repo.html?repo=' + repoName);
             var numIssues = data["open_issues_count"];
             var spanEl;
             if (numIssues) {
