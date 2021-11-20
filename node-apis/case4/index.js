@@ -13,6 +13,20 @@ console.log("complete", mylist.completeNote())
 console.log("get", mylist.getNextNote())
 
 
-const a = []
-console.log(a.shift())
-console.log(a)
+
+
+const Logger = require("./logger")
+
+const log = new Logger();
+
+log.green("hey")
+log.red("red")
+log.white("ehy")
+
+const MovieSearch = require("./movieSearch")
+
+const movie = new MovieSearch();
+
+movie.search("Spider-Man").then((res)=>{
+   return console.log(res.data)
+})
